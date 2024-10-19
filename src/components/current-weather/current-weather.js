@@ -27,9 +27,9 @@ const CurrentWeather = ({data}) =>
 
                 <div className="details">
 
-                    <div className="parameter-row">
+                    <div className="parameter-row-head">
 
-                        <span className="parameter-label">Details</span>
+                        <span className="parameter-label-head">Details</span>
 
                     </div>
 

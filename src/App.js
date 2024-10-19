@@ -53,7 +53,11 @@ function App() {
       <Search onSearchChange = {handleOnSearchChange} />
       {currentWeather && <CurrentWeather data={currentWeather} />}
       {forecast && <Forecast data={forecast} />}
+      <p class="copyright">
+             2024 Gerald Obuseh
+    </p>
     </div>
+    
   );
 }
 
