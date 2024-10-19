@@ -14,3 +14,42 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Clash Grotesk',
     monospace;
 }
+
+  @media (max-width: 400px) {
+  body {
+    font-size: 14px; /* Adjust base font size for smaller screens */
+    background-color: #8899a6; /* Change background color if desired */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Adjust heading size */
+  }
+
+  h2 {
+    font-size: 1.25rem; /* Adjust subheading size */
+  }
+
+  p {
+    font-size: 0.9rem; /* Adjust paragraph text size */
+    line-height: 1.4; /* Increase line height for better readability */
+  }
+
+  /* Add padding or margins to containers */
+  .container {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  /* Adjust button sizes */
+  .btn {
+    font-size: 0.9rem; /* Smaller button text */
+    padding: 8px 12px; /* Adjust padding */
+  }
+
+  /* Example for adjusting an image */
+  img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+  }
+
+  

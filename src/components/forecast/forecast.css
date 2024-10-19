@@ -1,5 +1,6 @@
 .title {
-    font-size: 20px;
+    font-size: 12px;
+    margin-left: 10%;
     font-weight: 600;
     color: #f5f5f5;
 
@@ -13,12 +14,12 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     padding: 10px 20px;
 }
 
 .icon-small {
-    width: 55px;
+    width: 10%;
 
 }
 
