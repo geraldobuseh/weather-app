@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Clash+Grotesk:wght@300;400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Clash Grotesk', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #d5d4d4;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Clash Grotesk',
+    monospace;
+}
