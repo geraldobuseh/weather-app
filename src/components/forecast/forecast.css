@@ -1,68 +1,135 @@
-.title {
-    font-size: 12px;
-    margin-left: 10%;
-    font-weight: 600;
-    color: #f5f5f5;
+.forecast-card {
+    width: 100%;
+    border-radius: 28px;
+    padding: 32px;
+    background: linear-gradient(160deg, rgba(11, 13, 26, 0.92) 0%, rgba(10, 35, 54, 0.92) 60%, rgba(143, 223, 255, 0.12) 100%);
+    border: 1px solid rgba(143, 223, 255, 0.35);
+    box-shadow: 0 28px 60px rgba(9, 29, 46, 0.6);
+    color: #e9f7ff;
+    backdrop-filter: blur(14px);
+}
 
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 24px;
+    color: #8fdfff;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 .daily-item {
-    background-color: #f5f5f5;
-    border-radius: 30px;
-    height: 40px;
-    margin: 5px;
+    background: rgba(143, 223, 255, 0.08);
+    border: 1px solid transparent;
+    border-radius: 16px;
+    min-height: 64px;
+    margin: 8px 0;
     display: flex;
     align-items: center;
     cursor: pointer;
-    font-size: 14px;
-    padding: 10px 20px;
+    font-size: 16px;
+    padding: 14px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease, background 0.3s ease;
+}
+
+.daily-item:hover,
+.accordion__button[aria-expanded="true"] .daily-item {
+    transform: translateY(-4px);
+    border-color: rgba(143, 223, 255, 0.6);
+    background: rgba(143, 223, 255, 0.16);
+    box-shadow: 0 18px 28px rgba(39, 130, 182, 0.35);
 }
 
 .icon-small {
-    width: 10%;
-
+    width: 48px;
+    height: 48px;
+    filter: drop-shadow(0 12px 20px rgba(19, 114, 189, 0.5));
 }
 
 .day {
-    color: #212121;
+    color: #f5fbff;
     flex: 1 1;
-    font-weight: 550;
-    margin-left: 20px;
+    font-weight: 600;
+    margin-left: 16px;
+    letter-spacing: 1px;
 }
 
 .description {
     flex: 1 1;
-    margin-right: 15px;
+    margin-right: 20px;
     text-align: right;
     text-transform: capitalize;
+    color: rgba(233, 247, 255, 0.7);
 }
 
 .min-max {
-    color: #757575;
+    color: #8fdfff;
+    font-weight: 600;
 }
 
 .daily-details-grid {
-    grid-row-gap: 0;
-    grid-column-gap: 15px;
-    row-gap: 0;
-    column-gap: 15px;
     display: grid;
-    flex: 1 1;
-    grid-template-columns: auto auto;
-    padding: 5px 15px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px 24px;
+    padding: 18px 6px 6px;
 }
 
 .daily-details-grid-item {
     display: flex;
-    height: 30px;
     justify-content: space-between;
     align-items: center;
+    padding: 12px 18px;
+    border-radius: 14px;
+    background: rgba(143, 223, 255, 0.08);
+    border: 1px solid rgba(143, 223, 255, 0.15);
 }
 
 .daily-details-grid-item label:first-child {
-    color: #f5f5f5;
+    color: rgba(233, 247, 255, 0.7);
+    font-size: 14px;
 }
 
 .daily-details-grid-item label:last-child {
-    color: #212121;
+    color: #f5fbff;
+    font-weight: 600;
+}
+
+.accordion__panel {
+    animation: panelSlide 0.35s ease;
+}
+
+@keyframes panelSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .forecast-card {
+        padding: 24px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .daily-item {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .description {
+        text-align: left;
+        flex-basis: 100%;
+        margin: 0;
+    }
+
+    .daily-details-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
 }
