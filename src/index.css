@@ -7,7 +7,8 @@ body {
   font-family: "Poppins" !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #8899a6;
+  background-color: #020409;
+  color: #e9f7ff;
 }
 
 code {

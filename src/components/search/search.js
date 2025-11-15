@@ -48,17 +48,19 @@ const Search = ({onSearchChange}) =>
     
     const handleOnChange = (searchData) => {
         setSearch(searchData);
-        onSearchChange(searchData)
-    }
+        onSearchChange(searchData);
+    };
     return (
         <AsyncPaginate
-            placeholder="Search for City"
+            placeholder="Search for a city"
             debounceTimeout={600}
             value={search}
             onChange={handleOnChange}
             loadOptions={loadOptions}
+            className="search-control"
+            classNamePrefix="weather-search"
         />
-    )
-}
+    );
+};
 
-export default Search; 
+export default Search;
